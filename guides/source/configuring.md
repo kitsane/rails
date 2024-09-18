@@ -62,6 +62,7 @@ Below are the default values associated with each target version. In cases of co
 
 - [`config.action_dispatch.strict_freshness`](#config-action-dispatch-strict-freshness): `true`
 - [`config.active_support.to_time_preserves_timezone`](#config-active-support-to-time-preserves-timezone): `:zone`
+- [`config.active_storage.key_prefix`](#config-active-storage-key-prefix): `nil`
 
 #### Default Values for Target Version 7.2
 
@@ -3191,6 +3192,10 @@ The default value depends on the `config.load_defaults` target version:
 
 Determines whether the Active Storage assets should be added to the asset pipeline precompilation. It
 has no effect if Sprockets is not used. The default value is `true`.
+
+#### `config.active_storage.key_prefix`
+
+Allows customization of `ActiveStorage::Blob.key` to prefix it with a string or block.
 
 ### Configuring Action Text
 
